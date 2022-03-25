@@ -1,0 +1,11 @@
+from enum import Enum
+
+
+class ObjectType(Enum):
+    VARIABLE = "VARIABLE"
+    NAME = "NAME"
+    MARKER = "MARKER"
+    FUNCTION = "FUNCTION"
+    MULTI_KEYWORD_FUNCTION = "MULTI_KEYWORD_FUNCTION"
+    STRING = "STRING"
+    COMMAND = "COMMAND"
