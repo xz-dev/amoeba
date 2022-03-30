@@ -1,5 +1,4 @@
 from .object import Object
-from .object_type import ObjectType
 from .keyword_search_tree import KeywordSearchTreeNode
 from .keyword_match import KeywordMatch
 from .context import Context

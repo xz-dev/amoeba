@@ -1,12 +1,21 @@
 from .object_type import ObjectType
-from .link_grammar import LinkGrammar
 
 
 class Object:
 
-    def __init__(self, name: str, obj_type: ObjectType, value,
-                 grammar_link: LinkGrammar):
+    def __init__(self):
+        self.name = None
+        self.obj_type = None
+        self.value = None
+
+    def name(self, name: str):
         self.name = name
-        self.type = obj_type
+        return self
+
+    def obj_type(self, obj_type: ObjectType):
+        self.obj_type = obj_type
+        return self
+
+    def value(self, value):
         self.value = value
-        self.grammar_link = LinkGrammar
+        return self

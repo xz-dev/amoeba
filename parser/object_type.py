@@ -1,11 +1,18 @@
 from enum import Enum
+from .link_grammar import LinkGrammar
 
 
-class ObjectType(Enum):
+class ObjectTypeEnum(Enum):
     VARIABLE = "VARIABLE"
     NAME = "NAME"
     MARKER = "MARKER"
-    FUNCTION = "FUNCTION"
-    MULTI_KEYWORD_FUNCTION = "MULTI_KEYWORD_FUNCTION"
-    STRING = "STRING"
-    COMMAND = "COMMAND"
+
+
+class ObjectType:
+
+    def __init__(self, type: ObjectTypeEnum):
+        self.type = type
+        self.grammar_link = None
+
+    def grammar_link(self, grammar_link: LinkGrammar):
+        self.grammar_link = grammar_link

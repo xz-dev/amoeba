@@ -21,8 +21,6 @@ class KeywordMatch:
         next_object_node = None
         if object_node:
             next_object_node = object_node.get_node(word)
-            if next_object_node:
-                object_node = next_object_node
 
         if not hp_next_node and hp_object_node:
             if not next_object_node:
